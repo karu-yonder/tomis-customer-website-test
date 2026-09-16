@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yonder widget test</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 32px;
+        max-width: 640px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Yonder widget test</h1>
+    <p>
+      This page loads the production snippet with no test_mode flag. Send a
+      message, then check Chat Logs. Inbox only updates after live chat or SMS
+      handoff.
+    </p>
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://chat.tomis.tech/widget/load.js";
+        script.async = true;
+        script.dataset.api = "yonder";
+        script.onload = function () {
+          window.yonder.chat.load({ id: "yonder-prod-testing" });
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>
