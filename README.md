@@ -1,8 +1,19 @@
 # tomis-customer-website-test
 
-Minimal customer site for loading the production Yonder chat widget without test mode.
+Demo tourism site for loading the production Yonder chat widget without test mode. TOMIS Skydives is fictional. The pages are real paths so announcements can be checked on subpaths.
 
-`index.html` embeds the same install snippet an activity provider would put on their website. It does not pass `test_mode`, so conversations created here are production chats.
+`index.html` and every inner page embed the same install snippet an activity provider would put on their website. It does not pass `test_mode`, so conversations created here are production chats.
+
+## Pages
+
+- `/`
+- `/locations/` and `/locations/byron-bay/`, `/locations/cairns/`, `/locations/noosa/`
+- `/what-to-expect/`, `/media-packages/`, `/transfers/`, `/faq/`
+- `/deals/`, `/gift-vouchers/`
+- `/our-story/`, `/the-crew/`, `/contact/`
+- `/booking/` and `/booking/price/`
+
+Each page prints its path under the heading. On GitHub Pages the path includes `/tomis-customer-website-test`. Save the announcement against the full address in the browser.
 
 ## Run locally
 

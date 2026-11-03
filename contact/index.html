@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | TOMIS Skydives</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="topbar">Open 7 days, 7am to 6pm AEST · Beach landings at three drop zones</div>
+    <header class="site-header">
+      <a class="brand" href="../">TOMIS <span>Skydives</span></a>
+      <input id="nav-toggle" class="nav-toggle" type="checkbox"><label class="nav-toggle-label" for="nav-toggle">Menu</label><nav><ul class="menu"><li class="has-sub"><a href="../locations/">Locations</a><ul><li><a href="../locations/">All locations</a></li><li><a href="../locations/byron-bay/">Byron Bay</a></li><li><a href="../locations/cairns/">Cairns</a></li><li><a href="../locations/noosa/">Noosa</a></li></ul></li><li class="has-sub"><a href="../what-to-expect/">Your jump</a><ul><li><a href="../what-to-expect/">What to expect</a></li><li><a href="../media-packages/">Photo and video</a></li><li><a href="../transfers/">Transfers</a></li><li><a href="../faq/">FAQ</a></li></ul></li><li><a href="../booking/price/">Prices</a></li><li><a href="../deals/">Offers</a></li><li><a href="../gift-vouchers/">Gift vouchers</a></li><li class="has-sub"><a href="../our-story/" class="is-current">About</a><ul><li><a href="../our-story/">Our story</a></li><li><a href="../the-crew/">The crew</a></li><li><a href="../contact/" class="is-current">Contact</a></li></ul></li><li><a href="../booking/" class="book-link">Book</a></li></ul></nav>
+    </header>
+    
+    <div class="page-head">
+      <div class="wrap">
+        <p class="crumb"><a href="../">Home</a> / Contact</p>
+        <h1>Contact</h1>
+        <p class="path" id="page-path"></p>
+      </div>
+    </div>
+    <main class="section">
+      <div class="wrap prose">
+        <p class="lead">This site does not take phone bookings. Open the chat button to talk to the widget.</p>
+        
+<ul>
+  <li>Byron Bay manifest: sample desk, on the airfield.</li>
+  <li>Cairns manifest: sample desk, on the airfield.</li>
+  <li>Noosa manifest: sample desk, on the airfield.</li>
+</ul>
+<p>Hours on every drop zone are 7am to 6pm AEST, seven days.</p>
+
+      </div>
+    </main>
+
+    
+    <footer class="site-footer">
+      <div class="footer-cols"><div><h2>Locations</h2><ul><li><a href="../locations/byron-bay/">Byron Bay</a></li><li><a href="../locations/cairns/">Cairns</a></li><li><a href="../locations/noosa/">Noosa</a></li></ul></div><div><h2>Your jump</h2><ul><li><a href="../what-to-expect/">What to expect</a></li><li><a href="../media-packages/">Photo and video</a></li><li><a href="../transfers/">Transfers</a></li><li><a href="../faq/">FAQ</a></li></ul></div><div><h2>Plan</h2><ul><li><a href="../booking/price/">Prices</a></li><li><a href="../deals/">Offers</a></li><li><a href="../gift-vouchers/">Gift vouchers</a></li><li><a href="../booking/">Book</a></li></ul></div><div><h2>About</h2><ul><li><a href="../our-story/">Our story</a></li><li><a href="../the-crew/">The crew</a></li><li><a href="../contact/">Contact</a></li></ul></div></div>
+      <p class="fine">TOMIS Skydives is a demo tourism site for the chat widget. Nothing on these pages can be booked.</p>
+    </footer>
+
+    <script>
+      var pathLabel = document.getElementById("page-path");
+      if (pathLabel) {
+        pathLabel.textContent = window.location.pathname;
+      }
+    </script>
+    
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://chat.tomis.tech/widget/load.js";
+        script.async = true;
+        script.dataset.api = "yonder";
+        script.onload = function () {
+          window.yonder.chat.load({ id: "yonder-prod-testing" });
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+
+  </body>
+</html>

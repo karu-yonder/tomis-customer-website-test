@@ -3,22 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yonder widget test</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        margin: 32px;
-        max-width: 640px;
-      }
-    </style>
+    <title>TOMIS Skydives</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>Yonder widget test</h1>
-    <p>
-      This page loads the production snippet with no test_mode flag. Send a
-      message, then check Chat Logs. Inbox only updates after live chat or SMS
-      handoff.
-    </p>
+    <div class="topbar">Open 7 days, 7am to 6pm AEST · Beach landings at three drop zones</div>
+    <header class="site-header">
+      <a class="brand" href="./">TOMIS <span>Skydives</span></a>
+      <input id="nav-toggle" class="nav-toggle" type="checkbox"><label class="nav-toggle-label" for="nav-toggle">Menu</label><nav><ul class="menu"><li class="has-sub"><a href="locations/">Locations</a><ul><li><a href="locations/">All locations</a></li><li><a href="locations/byron-bay/">Byron Bay</a></li><li><a href="locations/cairns/">Cairns</a></li><li><a href="locations/noosa/">Noosa</a></li></ul></li><li class="has-sub"><a href="what-to-expect/">Your jump</a><ul><li><a href="what-to-expect/">What to expect</a></li><li><a href="media-packages/">Photo and video</a></li><li><a href="transfers/">Transfers</a></li><li><a href="faq/">FAQ</a></li></ul></li><li><a href="booking/price/">Prices</a></li><li><a href="deals/">Offers</a></li><li><a href="gift-vouchers/">Gift vouchers</a></li><li class="has-sub"><a href="our-story/">About</a><ul><li><a href="our-story/">Our story</a></li><li><a href="the-crew/">The crew</a></li><li><a href="contact/">Contact</a></li></ul></li><li><a href="booking/" class="book-link">Book</a></li></ul></nav>
+    </header>
+    
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Beachfront tandem skydives</h1>
+        <p>Three coastal drop zones. An instructor beside you. Sand under your feet at the end.</p>
+        <p class="path" id="page-path"></p>
+        <div class="actions">
+          <a href="locations/">Choose a location</a>
+          <a class="secondary" href="booking/price/">See prices</a>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <h2>Drop zones</h2>
+        <p class="lead">Pick the coast you want under the canopy. Each location page has its own packages.</p>
+        
+<div class="grid">
+  <article class="card">
+    <h3>Byron Bay</h3>
+    <p>Cape Byron, the lighthouse, and a beach landing when the wind allows.</p>
+    <p class="price">From $349</p>
+    <a class="more" href="locations/byron-bay/">View drop zone</a>
+  </article>
+  <article class="card">
+    <h3>Cairns</h3>
+    <p>Rainforest to the reef. Morning loads usually have the clearest view.</p>
+    <p class="price">From $329</p>
+    <a class="more" href="locations/cairns/">View drop zone</a>
+  </article>
+  <article class="card">
+    <h3>Noosa</h3>
+    <p>The national park headland on one side and the river mouth on the other.</p>
+    <p class="price">From $309</p>
+    <a class="more" href="locations/noosa/">View drop zone</a>
+  </article>
+</div>
+
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <h2>How a jump works</h2>
+        <div class="steps">
+          <div class="step"><strong>1. Check in</strong> Paperwork, a harness, and a short brief on the landing.</div>
+          <div class="step"><strong>2. The ride up</strong> About 20 minutes to altitude, with the door open for the view.</div>
+          <div class="step"><strong>3. Freefall</strong> Your instructor flies the jump. You look at the coast.</div>
+          <div class="step"><strong>4. Beach landing</strong> A canopy ride down, then photos if you added a media package.</div>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="site-footer">
+      <div class="footer-cols"><div><h2>Locations</h2><ul><li><a href="locations/byron-bay/">Byron Bay</a></li><li><a href="locations/cairns/">Cairns</a></li><li><a href="locations/noosa/">Noosa</a></li></ul></div><div><h2>Your jump</h2><ul><li><a href="what-to-expect/">What to expect</a></li><li><a href="media-packages/">Photo and video</a></li><li><a href="transfers/">Transfers</a></li><li><a href="faq/">FAQ</a></li></ul></div><div><h2>Plan</h2><ul><li><a href="booking/price/">Prices</a></li><li><a href="deals/">Offers</a></li><li><a href="gift-vouchers/">Gift vouchers</a></li><li><a href="booking/">Book</a></li></ul></div><div><h2>About</h2><ul><li><a href="our-story/">Our story</a></li><li><a href="the-crew/">The crew</a></li><li><a href="contact/">Contact</a></li></ul></div></div>
+      <p class="fine">TOMIS Skydives is a demo tourism site for the chat widget. Nothing on these pages can be booked.</p>
+    </footer>
+
+    <script>
+      var pathLabel = document.getElementById("page-path");
+      if (pathLabel) {
+        pathLabel.textContent = window.location.pathname;
+      }
+    </script>
+    
     <script>
       (function () {
         var script = document.createElement("script");
@@ -31,5 +89,6 @@
         document.head.appendChild(script);
       })();
     </script>
+
   </body>
 </html>
