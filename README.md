@@ -1,6 +1,6 @@
 # tomis-customer-website-test
 
-Demo tourism site for loading the production Yonder chat widget without test mode. TOMIS Skydives is fictional. The pages are real paths so announcements can be checked on subpaths.
+Demo tourism site for loading the production TOMIS demo chat widget without test mode. TOMIS Skydives is fictional. The pages are real paths so announcements can be checked on subpaths.
 
 `index.html` and every inner page embed the same install snippet an activity provider would put on their website. It does not pass `test_mode`, so conversations created here are production chats.
 
@@ -29,11 +29,11 @@ Open [http://127.0.0.1:8765/](http://127.0.0.1:8765/).
 
 ## Widget snippet
 
-The page loads:
+The install snippet is in the `<head>` of every page. It loads:
 
 - script: `https://chat.tomis.tech/widget/load.js`
-- API namespace: `yonder`
-- site id: `yonder-prod-testing`
+- API namespace: `tomis`
+- site id: `demo`
 
 ```html
 <script>
@@ -41,9 +41,9 @@ The page loads:
     var script = document.createElement("script");
     script.src = "https://chat.tomis.tech/widget/load.js";
     script.async = true;
-    script.dataset.api = "yonder";
+    script.dataset.api = "tomis";
     script.onload = function () {
-      window.yonder.chat.load({ id: "yonder-prod-testing" });
+      window.tomis.chat.load({ id: "demo" });
     };
     document.head.appendChild(script);
   })();
@@ -52,7 +52,7 @@ The page loads:
 
 This is a real conversation. Test mode is only on when the URL has `test_mode=true`, or when `load({ test_mode: true })` is called (the admin Test Chatbot page does this).
 
-`https://chat.tomis.tech/?id=yonder-prod-testing&fullscreen=true` is also not test mode. `fullscreen` is layout only.
+`https://chat.tomis.tech/?id=demo&floating=true` is the closed launcher. It is also not test mode. `floating=true` shows the button. `fullscreen` only stretches the hosted page.
 
 ## Chat Logs vs Inbox
 
@@ -68,7 +68,7 @@ Inbox only gets the thread after the visitor requests **live chat** or **SMS han
 
 ### See it in Inbox
 
-1. In Tomis, enable **Live Chat** (`handoff_chat_widget_to_live_chat`) for `yonder-prod-testing`. Live chat and SMS handoff are exclusive.
+1. In Tomis, enable **Live Chat** (`handoff_chat_widget_to_live_chat`) for `demo`. Live chat and SMS handoff are exclusive.
 2. On this page, ask to talk to a person, or use a welcome/FAQ button that starts live chat.
 3. Submit the live chat form.
 4. Inbox should show an open `webchat` conversation.
