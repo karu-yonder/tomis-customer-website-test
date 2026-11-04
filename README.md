@@ -2,7 +2,7 @@
 
 Demo tourism site for loading the production TOMIS demo chat widget without test mode. TOMIS Skydives is fictional. The pages are real paths so announcements can be checked on subpaths.
 
-`index.html` and every inner page embed the same install snippet an activity provider would put on their website. It does not pass `test_mode`, so conversations created here are production chats.
+The install snippet is in the `<head>` of `index.html` only. `404.html` is the same file. GitHub Pages serves that file for every missing path, so `/booking/price/` still runs the homepage head. `site.js` swaps the page content from the address in the browser.
 
 ## Pages
 
@@ -13,23 +13,23 @@ Demo tourism site for loading the production TOMIS demo chat widget without test
 - `/our-story/`, `/the-crew/`, `/contact/`
 - `/booking/` and `/booking/price/`
 
-Each page prints its path under the heading. On GitHub Pages the path includes `/tomis-customer-website-test`. Save the announcement against the full address in the browser.
+Any other path still loads the widget. Each page prints its path under the heading. On GitHub Pages the path includes `/tomis-customer-website-test`. Save the announcement against the full address in the browser.
 
 ## Run locally
 
 From this directory:
 
 ```bash
-python3 -m http.server 8765
+python3 serve.py
 ```
 
-Open [http://127.0.0.1:8765/](http://127.0.0.1:8765/).
+Open [http://127.0.0.1:8765/](http://127.0.0.1:8765/). `python3 -m http.server` only serves `/`, because it does not fall back to `index.html`.
 
 `localhost` and `127.0.0.1` are always allowed by the widget domain check. Opening the file directly (`file://`) can fail.
 
 ## Widget snippet
 
-The install snippet is in the `<head>` of every page. It loads:
+The install snippet is in the `<head>` of `index.html`. It loads:
 
 - script: `https://chat.tomis.tech/widget/load.js`
 - API namespace: `tomis`
